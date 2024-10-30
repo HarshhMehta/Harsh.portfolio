@@ -20,11 +20,11 @@ function About() {
           About Me
         </h1>
         <p data-aos='fade-left '>
-          Hello, I'm Harsh, a front-end developer. I have a passion for building innovative web applications. I pursuing a master's degree in Parul University and Energy Studies with a specialization in Full Stack Web Development, Proficient in web development. During my time at university, I developed a keen interest in web development and decided to pursue it as a career.
+          Hello, I'm Harsh, a front-end developer. I have a passion for building innovative web applications. I am pursuing a master's degree in Parul University and Energy Studies with a specialization in Full Stack Web Development, Proficient in web development. During my time at university, I developed a keen interest in web development and decided to pursue it as a career.
           <br />
-          I have experience working with HTML, CSS, JavaScript, React, PHP,  SQL, and Git and github, and I'm always looking to expand my skill set. Eager to leverage this comprehensive skill set and contribute to innovative projects in the dynamic field of web development Apart From this i also interest in graphic design..
+          I have experience working with HTML, CSS, JavaScript, React, PHP,  SQL, Git, and GitHub, and I'm always looking to expand my skill set. Eager to leverage this comprehensive skill set and contribute to innovative projects in the dynamic field of web development Apart From this i also interest in graphic design..
           <br />
-          When I'm not coding, you can find me exploring new locations for an outing, hiking, or strumming my guitar and drawing inspiration from nature. I'm a firm believer in work-life balance and strive to maintain a healthy lifestyle.
+          When I'm not coding, you can find me exploring new locations for an outing, hiking, or strumming my guitar and drawing inspiration from nature. I firmly believe in work-life balance and strive to maintain a healthy lifestyle.
         </p>
         <div className='flex mt-8 gap-2 space-x-2 items-center justify-center'>
           <a href={Resume} target="_blank">

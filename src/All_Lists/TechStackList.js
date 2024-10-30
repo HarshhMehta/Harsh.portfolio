@@ -23,24 +23,24 @@ const TechStackList = [
     },
     {
         id: 4,
-        image: TAILWIND,
-    },
-    {
-        id: 5,
         image: REACT,
     },
     {
+        id: 5,
+        image: TAILWIND,
+    },
+    {
         id: 6,
-        image: WORDPRESS,
+        image: PHP,
     },
     {
         id: 7,
-        image: PHP,
+        image: MYSQL,
     },    
 
     {
         id: 8,
-        image: MYSQL,
+        image: WORDPRESS,
     }
 ]
 

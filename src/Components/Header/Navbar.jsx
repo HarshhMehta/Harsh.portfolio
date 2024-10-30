@@ -77,9 +77,7 @@ function Navbar() {
             <nav className='sticky top-0 bg-white text-black dark:bg-slate-900 dark:text-white'>
                 <div className='h-10vh flex justify-between z-50 lg:py-5 pl-20 pr-14 py-4 border-b border-slate-800'>
                     <div className='flex items-center flex-1'>
-                        <span className='text-3xl font-bold'>
-                            <Link to='Home' spy={true} smooth={true} onClick={() => setClick(false)}>&lt;har.shh/&gt;</Link>
-                        </span>
+                        {/* Removed Top Name */}
                     </div>
                     <div className='lg:flex md:flex flex-1 items-center justify-end font-normal hidden'>
                         <ul className='flex gap-8 text-[18px]'>
@@ -119,9 +117,9 @@ function Navbar() {
             {visible && (
                 <button
                     onClick={scrollToTop}
-                    className="fixed bottom-5 right-5 bg-[rgba(217,70,239,0.8)] text-white p-3 rounded-full shadow-lg transition-opacity duration-300 md:hidden"
+                    className="fixed bottom-5 right-5 w-12 h-12 bg-[rgba(217,70,239,0.8)] text-white rounded-full shadow-lg transition-opacity duration-300 md:hidden flex items-center justify-center"
                 >
-                    ↑ Top
+                    ↑
                 </button>
             )}
         </>

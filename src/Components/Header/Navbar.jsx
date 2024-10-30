@@ -8,6 +8,7 @@ import { CiMenuFries } from 'react-icons/ci';
 function Navbar() {
     const [click, setClick] = useState(false);
     const [darkMode, setDarkMode] = useState(true);
+    const [visible, setVisible] = useState(false); // State for button visibility
 
     const toggleTheme = (event) => {
         setDarkMode(event.target.checked);
@@ -16,7 +17,27 @@ function Navbar() {
 
     useEffect(() => {
         document.documentElement.setAttribute('class', 'dark');
+
+        const handleScroll = () => {
+            if (window.pageYOffset > 300) {
+                setVisible(true); // Show button if scrolled down
+            } else {
+                setVisible(false); // Hide button otherwise
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll); // Listen for scroll events
+        return () => {
+            window.removeEventListener('scroll', handleScroll); // Cleanup on unmount
+        };
     }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
 
     const handleClick = () => setClick(!click);
     const navItems = ['Home', 'About', 'TechStack', 'Projects', 'Contact'];
@@ -26,7 +47,7 @@ function Navbar() {
     };
 
     const content = (
-        <div className='lg:hidden block absolute top-16 w-full left-0 right-0 bg-white dark:bg-slate-900 transition '>
+        <div className='lg:hidden block absolute top-16 w-full left-0 right-0 bg-white dark:bg-slate-900 transition'>
             <ul className='text-center text-xl p-20'>
                 {navItems.map((item, index) => (
                     <Link key={index} to={item} spy={true} smooth={true} onClick={handleNavItemClick}>
@@ -34,14 +55,14 @@ function Navbar() {
                     </Link>
                 ))}
                 <div>
-                    <label className="relative inline-flex items-center cursor-pointer	">
+                    <label className="relative inline-flex items-center cursor-pointer">
                         <input
                             type="checkbox"
                             className="sr-only peer"
                             onChange={toggleTheme}
                             checked={darkMode}
                         />
-                        <div className="w-[49px] h-6 bg-slate-500 rounded-full peer-checked:after:translate-x-6 after:absolute after:top-[2px]  after:left-[2px] after:bg-gray-300 after:rounded-full after:h-5  after:w-5 after:transition-all">
+                        <div className="w-[49px] h-6 bg-slate-500 rounded-full peer-checked:after:translate-x-6 after:absolute after:top-[2px] after:left-[2px] after:bg-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all">
                             <img src={light} alt="light" className="absolute w-4 z-10 m-[4px] text-white " />
                             <img src={dark} alt="dark" className="absolute w-4 z-10 m-[4px] text-white right-0 " />
                         </div>
@@ -68,14 +89,14 @@ function Navbar() {
                                 </Link>
                             ))}
                             <div>
-                                <label className="relative inline-flex items-center cursor-pointer	">
+                                <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
                                         className="sr-only peer"
                                         onChange={toggleTheme}
                                         checked={darkMode}
                                     />
-                                    <div className="w-[49px] h-6 bg-slate-500 rounded-full peer-checked:after:translate-x-6 after:absolute after:top-[2px]  after:left-[2px] after:bg-gray-300 after:rounded-full after:h-5  after:w-5 after:transition-all">
+                                    <div className="w-[49px] h-6 bg-slate-500 rounded-full peer-checked:after:translate-x-6 after:absolute after:top-[2px] after:left-[2px] after:bg-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all">
                                         <img src={light} alt="light" className="absolute w-4 z-10 m-[4px] text-white " />
                                         <img src={dark} alt="dark" className="absolute w-4 z-10 m-[4px] text-white right-0 " />
                                     </div>
@@ -93,6 +114,16 @@ function Navbar() {
                     </div>
                 </div>
             </nav>
+
+            {/* Scroll to Top Button - Only Visible on Small Screens */}
+            {visible && (
+                <button
+                    onClick={scrollToTop}
+                    className="fixed bottom-5 right-5 bg-[rgba(217,70,239,0.8)] text-white p-3 rounded-full shadow-lg transition-opacity duration-300 md:hidden"
+                >
+                    ↑ Top
+                </button>
+            )}
         </>
     );
 }

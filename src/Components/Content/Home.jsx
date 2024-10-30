@@ -36,7 +36,7 @@ function Home() {
         <h1 data-aos='fade-right' className='text-[52px] font-semibold mb-8 leading-normal uppercase'>
           Hola! <span className='text-fuchsia-500'>Harsh Here..</span>
         </h1>
-        <p data-aos='fade-left'>Hi, I'm a dedicated Front-end developer based in Indore, India. A passion for crafting stunning and interactive web experiences, I am constantly expanding my expertise in web development. With a diverse skill set, I aim to contribute innovatively to every project.</p>
+        <p data-aos='fade-left'>Hey folks!, I'm a dedicated Front-end developer Based in Indore, currently in Vadodara, India. With a passion for crafting stunning and interactive web experiences, I am constantly expanding my expertise in web development. With a diverse skill set, I aim to contribute innovatively to every project.</p>
         <div data-aos='fade-up' className='flex mt-8 gap-2'>
           <div className='flex items-center justify-center'>
             

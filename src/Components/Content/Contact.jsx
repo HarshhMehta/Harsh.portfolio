@@ -14,7 +14,7 @@ function Contact() {
       <h1 data-aos='fade-right' className='text-[52px] font-semibold mb-20 leading-normal uppercase text-fuchsia-500'>Contact Me</h1>
       <form action="https://api.web3forms.com/submit" method="POST" className='flex flex-col gap-2 lg:w-1/2'>
         <div className=' dark:text-slate-500 lg:flex gap-6'>
-          <input type="hidden" name="access_key" value="2fe17d29-8676-42b9-83b6-109b4091e10b" />
+          <input type="hidden" name="access_key" value="c8dbde8d-81cf-414e-86d1-6733c3a1d184" />
           <input type="text" name="name" className='w-full my-3 rounded-lg p-4 border-2 border-fuchsia-800 border-glow text-xl bg-white dark:bg-slate-800' placeholder='Enter Your Full Name' required />
           <input type="email" name="email" className='w-full my-3 rounded-lg p-4 border-2 border-fuchsia-800 border-glow text-xl bg-white dark:bg-slate-800' placeholder='Enter Your Email' required />
         </div>
